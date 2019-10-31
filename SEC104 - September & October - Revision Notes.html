@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			:root {
+				--shadow-dark:0 6px 10px rgba(40,40,40,0.2);
+				--shadow-darker:0 6px 10px rgba(40,40,40,0.4);
+				--font-family:'Helvetica Neue', 'Lucida Grande', 'Tahoma', 'Verdana', 'Arial', sans-serif;
+			}
+			html {
+				font-family:var(--font-family);
+			}
+			body {
+				background:rgb(230,230,230);
+				color:rgb(75,75,75);
+				margin:0;
+				padding:0;
+				overflow:visible;
+			}
+			.wrapper {
+				text-align:center;
+				
+			}
+			.heading {
+				display:inline-block;
+				margin-bottom:20px;
+				background:rgb(40,40,40);
+				color:rgb(245,245,245);
+				border-radius:10px;
+				overflow:hidden;
+				font-size:24px;
+				font-weight:bold;
+				padding:20px;
+				width:calc(100% - 40px - 40px);
+				box-shadow:var(--shadow-dark);
+			}
+			.heading:first-of-type {
+				margin-top:20px;
+			}
+			.container {
+				display:inline-block;
+				margin-bottom:20px;
+				background:rgb(250,250,250);
+				border-radius:10px;
+				overflow:hidden;
+				padding:20px 20px 10px 20px;
+				width:calc(100% - 40px - 40px);
+				transition:box-shadow 0.25s;
+				box-shadow:var(--shadow-dark);
+			}
+			.container:hover {
+				box-shadow:var(--shadow-darker);
+			}
+			.title {
+				display:block;
+				font-weight:bold;
+				text-align:left;
+				margin-bottom:10px;
+			}
+			.description {
+				display:block;
+				text-align:left;
+				margin-bottom:10px;
+				line-height:25px;
+			}
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="theme-color" content="#141414">
+		<title>SEC104 - September &amp; October - Revision Notes</title>
+	</head>
+	<body>	
+		<div class="wrapper">
+			<span class="heading">Cybersecurity (#SEC)</span>
+			<div class="container">
+				<span class="title">Most common reason we need security</span>
+				<span class="description">Fraudulent emails or being directed to fraudulent websites.</span>
+			</div>
+			<div class="container">
+				<span class="title">What security is</span>
+				<span class="description">Protection of assets and information from unauthorized access.</span>
+				<span class="description">Preservation of CIA and Parkerian Hexad.</span>
+			</div>
+			<div class="container">
+				<span class="title">What security is from a business perspective</span>
+				<span class="description">Business continuity issue</span>
+			</div>
+			<div class="container">
+				<span class="title">CIA Triad</span>
+				<span class="description">Confidentiality, Integrity, Availability</span>
+			</div>
+			<div class="container">
+				<span class="title">Parkerian Hexad</span>
+				<span class="description">CIA + Control/Possession, Authenticity, Utility</span>
+			</div>
+			<div class="container">
+				<span class="title">What a data breach can affect</span>
+				<span class="description">Productivity, reputation, data protection, share value, existence</span>
+			</div>
+			<div class="container">
+				<span class="title">Most top-rated threats</span>
+				<span class="description">Malware and phishing.</span>
+			</div>
+			<div class="container">
+				<span class="title">Most top-rated vulnerability</span>
+				<span class="description">Careless or unaware employees.</span>
+			</div>
+			<div class="container">
+				<span class="title">What we do most proactively</span>
+				<span class="description">Risk assessment</span>
+			</div>
+			<div class="container">
+				<span class="title">What we do most reactively</span>
+				<span class="description">Businesses do nothing, charities train staff or add additional communications</span>
+			</div>
+			<div class="container">
+				<span class="title">Security jigsaw</span>
+				<span class="description">Technical, procedural, personnel, legal, physical.</span>
+			</div>
+			<div class="container">
+				<span class="title">Technical security</span>
+				<span class="description">Authentication, access control, anti-virus, encryption</span>
+			</div>
+			<div class="container">
+				<span class="title">Physical security</span>
+				<span class="description">Physical access, theft, natural / environmental incidents.</span>
+			</div>
+			<div class="container">
+				<span class="title">Procedural security</span>
+				<span class="description">Policy, risk assessment, disaster planning and recovery, asset management.</span>
+			</div>
+			<div class="container">
+				<span class="title">Personnel security</span>
+				<span class="description">Recruitment procedures, training, termination procedures.</span>
+			</div>
+			<div class="container">
+				<span class="title">Legal security</span>
+				<span class="description">Compliance with the law, awareness of the law.</span>
+			</div>
+			<div class="container">
+				<span class="title">What an asset is</span>
+				<span class="description">Everything and everybody forming part of an information system.</span>
+			</div>
+			<div class="container">
+				<span class="title">What a threat is</span>
+				<span class="description">A potential violation of security.</span>
+			</div>
+			<div class="container">
+				<span class="title">What a vulnerability is</span>
+				<span class="description">The likelihood of a threat to become a reality.</span>
+			</div>
+			<div class="container">
+				<span class="title">What a risk is</span>
+				<span class="description">Threads and vulnerabilities of an asset. Probability X Impact.</span>
+			</div>
+			<div class="container">
+				<span class="title">What a countermeasure is</span>
+				<span class="description">Mechanism or procedure to reduce risk.</span>
+			</div>
+			<div class="container">
+				<span class="title">What an impact is</span>
+				<span class="description">The effect of a failure to preserve CIA.</span>
+			</div>
+			<div class="container">
+				<span class="title">Categories of computer crime and abuse</span>
+				<span class="description">Fraud, hacking, invasion of privacy, sabotage, theft, piracy, private work, virus, DoS, illegal content</span>
+			</div>
+			<div class="container">
+				<span class="title">Cyber-dependent crimes</span>
+				<span class="description">A computer or other form of ICT required to commit.</span>
+			</div>
+			<div class="container">
+				<span class="title">Cyber-enabled crimes</span>
+				<span class="description">A crime that’s facilitated by ICT.</span>
+			</div>
+			<div class="container">
+				<span class="title">Key incident types</span>
+				<span class="description">Malware infection most common.</span>
+			</div>
+			<div class="container">
+				<span class="title">Hackers and crackers</span>
+				<span class="description">Hackers are explorers, crackers are malicious.</span>
+			</div>
+			<div class="container">
+				<span class="title">Types of malware</span>
+				<span class="description">Virus (non-autonomous program that replicates itself by infecting data), worm (autonomously replicates and spreads through systems and networks), Trojan horse (program or data containing hidden functionality), spyware (gathers information about users).</span>
+			</div>
+			<div class="container">
+				<span class="title">Dimensions of malware behavior</span>
+				<span class="description">Infection (how and where users are likely to get it), payload (what the malware does), defense (how well it can hide itself and protect itself).</span>
+			</div>
+			<div class="container">
+				<span class="title">Authentication methods</span>
+				<span class="description">Passwords (something the user knows), cards / tokens (something the user has), biometric (something the user is).</span>
+			</div>
+			<span class="heading">Digital Forensics (#DFS)</span>
+			<div class="container">
+				<span class="title">ACPO guidelines for digital forensics</span>
+				<span class="description">Data shouldn’t be changed if it’s being used as evidence in court.
+				<span class="description">If the original data is to be accessed, the person accessing it should be competent, and should explain the implications and relevance of their actions.</span>
+				<span class="description">An audit trial or record of all processes applied to the evidence should be created.</span>
+				<span class="description">An independent third party should be able to follow the record, and achieve the same result. The person in charge of the investigation is held responsible for procedures being followed.</span>
+			</div>
+			<div class="container">
+				<span class="title">Forensic process</span>
+				<span class="description">Acquisition, examination / analysis, presentation.</span>
+			</div>
+			<div class="container">
+				<span class="title">Lab requirements</span>
+				<span class="description">Compliance to procedures, chain of custody, secure handling and storage of original data, ensure screens aren’t viewable by others, physical building complies with security requirements.</span>
+			</div>
+			<div class="container">
+				<span class="title">Acquisition</span>
+				<span class="description">Preservation of data, documentation, order of volatility, write blockers.</span>
+			</div>
+			<div class="container">
+				<span class="title">Examination / Analysis</span>
+				<span class="description">Dead analysis for preservation of data, forensic tools for live analysis, ignore FS characteristics to inspect registry, meta-files, pagefile.sys (RAM), INFO2 (Trash). File signature analysis, hidden folders, hash checking, data carving, pattern matching, indexing.</span>
+			</div>
+			<div class="container">
+				<span class="title">Anti-forensics</span>
+				<span class="description">Data hiding, artifact wiping, trial obfuscation, forensic tool vulnerabilities.</span>
+			</div>
+			<span class="heading">Cryptography (#CRY)</span>
+			<div class="container">
+				<span class="title">Cryptography</span>
+				<span class="description">Transformation of information into an encrypted form.</span>
+			</div>
+			<div class="container">
+				<span class="title">Data communication threats</span>
+				<span class="description">Interception (affects confidentiality), modification (affects integrity), blocking (affects availability).</span>
+			</div>
+			<div class="container">
+				<span class="title">Cryptographic techniques</span>
+				<span class="description">Transposition (symbols in the plaintext moved into different positions in ciphertext). Substitution (symbols are replaced with different ones). Concealment (additional symbols placed to conceal content).</span>
+			</div>
+			<div class="container">
+				<span class="title">One-time pad</span>
+				<span class="description">Long as the plaintext (at least). Each end has an identical pad. Cannot be broken. Difficult to use if a large amount of key material is consumed. Data integrity isn’t provided.</span>
+			</div>
+			<div class="container">
+				<span class="title">Asymmetric cryptography</span>
+				<span class="description">Public / private key pair.</span>
+			</div>
+			<div class="container">
+				<span class="title">One way hash</span>
+				<span class="description">Creates “fingerprint” of data through checksum.</span>
+			</div>
+			<div class="container">
+				<span class="title">Message Authentication Codes (MAC)</span>
+				<span class="description">Key dependent one way hash function. Provides authenticity, but not confidentiality. Can be used to ensure files haven’t been modified. </span>
+			</div>
+			<div class="container">
+				<span class="title">Cryptanalysis</span>
+				<span class="description">Recovering plaintext from ciphertext without the key.</span>
+			</div>
+			<span class="heading">Networks (#NOV)</span>
+			<div class="container">
+				<span class="title">Application layer</span>
+				<span class="description">HTTP / DNS</span>
+			</div>
+			<div class="container">
+				<span class="title">Transport layer</span>
+				<span class="description">TCP / UDP</span>
+			</div>
+			<div class="container">
+				<span class="title">Network layer</span>
+				<span class="description">IP</span>
+			</div>
+			<div class="container">
+				<span class="title">Link layer</span>
+				<span class="description">Ethernet / Wireless</span>
+			</div>
+			<div class="container">
+				<span class="title">Network edge</span>
+				<span class="description">End systems, access networks, links</span>
+			</div>
+			<div class="container">
+				<span class="title">Network core</span>
+				<span class="description">Packet switching, internet structure. Interconnected routers, network of networks. Routing (determines source-destination route taken by packets), forwarding (moves packets from router’s input to appropriate output).</span>
+			</div>
+			<div class="container">
+				<span class="title">Performance</span>
+				<span class="description">Delay, loss, throughput (rate at which bits transfer between sender and receiver).</span>
+			</div>
+			<div class="container">
+				<span class="title">Hosts</span>
+				<span class="description">End systems running network apps. Clients and servers.</span>
+			</div>
+			<div class="container">
+				<span class="title">Communication links</span>
+				<span class="description">Fiber, copper, radio, satellite.</span>
+			</div>
+			<div class="container">
+				<span class="title">Transmission rate</span>
+				<span class="description">Bandwidth.</span>
+			</div>
+			<div class="container">
+				<span class="title">Packet switches</span>
+				<span class="description">Forward packets (data) through routers and switches.</span>
+			</div>
+			<div class="container">
+				<span class="title">Internet</span>
+				<span class="description">Network of networks with interconnected ISPs.</span>
+			</div>
+			<div class="container">
+				<span class="title">Protocols</span>
+				<span class="description">Control sending and receiving of data. Define format and order of data sent and received among network entities, and actions taken on message transmission or receipt. There are protocol layers, and service models.</span>
+			</div>
+			<div class="container">
+				<span class="title">Internet standards</span>
+				<span class="description">RFC, IETF.</span>
+			</div>
+			<div class="container">
+				<span class="title">Services</span>
+				<span class="description">Web, VoIP, email, games etc.</span>
+			</div>
+			<div class="container">
+				<span class="title">Interfaces</span>
+				<span class="description">Hooks, APIs etc.</span>
+			</div>
+			<div class="container">
+				<span class="title">Physical media</span>
+				<span class="description">Bit (propagates between transmitter / receiver pairs), physical link (what lies between transmitter and receiver), guided media (copper, fiber, coax), unguided media (radio), twisted pair (two insulated copper wires).</span>
+			</div>
+			<div class="container">
+				<span class="title">Coaxial cable</span>
+				<span class="description">Two concentric copper conductors. Bidirectional. Broadband (multiple channels on cable, HFC). </span>
+			</div>
+			<div class="container">
+				<span class="title">Fiber optic cable</span>
+				<span class="description">Glass fiber carrying light pulses. Each pulse is a bit. High speed. Low error rate.</span>
+			</div>
+			<div class="container">
+				<span class="title">Radio</span>
+				<span class="description">Electromagnetic spectrum. Bidirectional. Susceptible to environmental factors (reflection, obstruction, interference). Multiple types (terrestrial, microwave, LAN, wide-area, satellite).</span>
+			</div>
+			<div class="container">
+				<span class="title">Loss and delay</span>
+				<span class="description">Packets queue in router buffers. If arrival rate exceeds output capacity, a queue is formed, leading to a delay. If no free buffers are available, packets are dropped, causing loss. The lost packet might be retransmitted by the previous node, by the end system, or not at all.</span>
+			</div>
+			<div class="container">
+				<span class="title">Sources of packet delay</span>
+				<span class="description">Processing, propagation, queue, transmission. Nodal = sum of all of them.</span>
+			</div>
+			<div class="container">
+				<span class="title">Processing delay</span>
+				<span class="description">Check bit errors, determine output link, typically takes less than a millisecond.</span>
+			</div>
+			<div class="container">
+				<span class="title">Queuing delay</span>
+				<span class="description">Time waiting at output link for transmission. Depends on congestion level of router.</span>
+			</div>
+			<div class="container">
+				<span class="title">Transmission delay</span>
+				<span class="description">Packet length (bits), link bandwidth (bits per second). Length divided by bandwidth.</span>
+			</div>
+			<div class="container">
+				<span class="title">Propagation delay</span>
+				<span class="description">Length of physical link, propagation speed. Length divided by speed.</span>
+			</div>
+			<div class="container">
+				<span class="title">Response Time / Round Trip Time (RTT)</span>
+				<span class="description">“Length of time it takes for a signal to be sent plus the length of time it takes for an acknowledgement of that signal to be received.”</span>
+			</div>
+			<div class="container">
+				<span class="title">Bottleneck link</span>
+				<span class="description">Link on end-to-end path that constrains the throughput.</span>
+			</div>
+			<div class="container">
+				<span class="title">Internet protocol stack</span>
+				<span class="description">Application (supporting network applications, FTP, SMTP, HTTP), Transport (process-to-process data transfer, TCP, UDP), Network (routing of datagrams from source to destination, IP, routing protocols), Link (data transfer between neighboring network elements, Ethernet, WiFi), Physical (bits on the wire).</span>
+			</div>
+			<div class="container">
+				<span class="title">ISO/OSI reference model (layers)</span>
+				<span class="description">Application, presentation, session, transport, network, link, physical. Internet stack doesn’t have the session (synchronization checkpointing, recovery of data exchange) and presentation (allow applications to interpret meaning of data) layers.</span>
+			</div>
+			<span class="heading">Application Layer (#NAL)</span>
+			<div class="container">
+				<span class="title">Network apps</span>
+				<span class="description">Run on different end systems, communicate over network, server communicates with browser. Network core devices don’t run user applications.</span>
+			</div>
+			<div class="container">
+				<span class="title">Server</span>
+				<span class="description">Always-on host. Static IP. Usually in a data center. </span>
+			</div>
+			<div class="container">
+				<span class="title">Clients</span>
+				<span class="description">Communicate with server. Intermittently connected. Dynamic IP. Do not communicate directly with each other.</span>
+			</div>
+			<div class="container">
+				<span class="title">P2P architecture</span>
+				<span class="description">No server. Clients communicate with each other (peers). Peers provide service to one another. Self scalability as new peers bring new service capacity. Peers can have dynamic IPs. </span>
+			</div>
+			<div class="container">
+				<span class="title">Process</span>
+				<span class="description">A program running within a host. Processes can communicate using inter-process communication as defined by the OS. Processes in different hosts can communicate via messages. A process must have an identifier to receive messages. The ID includes both IP address and port numbers associated with it. </span>
+			</div>
+			<div class="container">
+				<span class="title">Client process</span>
+				<span class="description">Initiates communication.</span>
+			</div>
+			<div class="container">
+				<span class="title">Server process</span>
+				<span class="description">Waits to be contacted.</span>
+			</div>
+			<div class="container">
+				<span class="title">Sockets</span>
+				<span class="description">Processes send and receive messages to and from their sockets.</span>
+			</div>
+			<div class="container">
+				<span class="title">Ports</span>
+				<span class="description">80 (HTTP), 25 (SMTP), 53 (DNS), 443 (HTTPS), 21 (FTP), 22 (SSH), 23 (Telnet), 69 (TFTP), SNMP (161).</span>
+			</div>
+			<div class="container">
+				<span class="title">Data integrity</span>
+				<span class="description">Some apps require reliable data transfer, others can tolerate loss. </span>
+			</div>
+			<div class="container">
+				<span class="title">Timing</span>
+				<span class="description">Some apps require low delay to be effective.</span>
+			</div>
+			<div class="container">
+				<span class="title">Throughput</span>
+				<span class="description">Some apps require a minimum amount of throughput to be effective.</span>
+			</div>
+			<div class="container">
+				<span class="title">Security</span>
+				<span class="description">Encryption, data integrity etc.</span>
+			</div>
+			<div class="container">
+				<span class="title">TCP</span>
+				<span class="description">Reliable, flow control, congestion control (throttling), no timing or throughput guarantee, connection-oriented.</span>
+			</div>
+			<div class="container">
+				<span class="title">UDP</span>
+				<span class="description">Unreliable, no flow control, no congestion control, no timing, no throughput guarantee, no security. Used by DNS.</span>
+			</div>
+			<div class="container">
+				<span class="title">App-layer protocols</span>
+				<span class="description">Types of messages (request, response), syntax (fields in messages), semantics (meaning of information in fields), rules for when and how processes send and respond to messages.</span>
+			</div>
+			<div class="container">
+				<span class="title">Open protocols</span>
+				<span class="description">Defined in RFCs, allow for interoperability, HTTP, SMTP etc.</span>
+			</div>
+			<div class="container">
+				<span class="title">Proprietary protocols</span>
+				<span class="description">Skype etc.</span>
+			</div>
+			<div class="container">
+				<span class="title">HTTP</span>
+				<span class="description">Web’s application layer protocol. Client - server model. Uses TCP to initiate connection on port 80 with the server. Server accepts the connection and HTTP messages are exchanged between the client and server. The connection is then closed. HTTP is stateless, meaning the server maintains no information about past client requests. </span>
+			</div>
+			<div class="container">
+				<span class="title">HTTP connections</span>
+				<span class="description">Non-persistent HTTP (at most one object sent over TCP), persistent HTTP (multiple objects sent over a single connection).</span>
+			</div>
+			<div class="container">
+				<span class="title">RTT</span>
+				<span class="description">Round-trip time. Time for a packet to travel from client to server and back.</span>
+			</div>
+			<div class="container">
+				<span class="title">HTTP response time</span>
+				<span class="description">One RTT to initiate connection. One RTT for request to return. File transmission time. 2RTT + file transmission time.</span>
+			</div>
+			<div class="container">
+				<span class="title">HTTP request</span>
+				<span class="description">Method, URL, Version. Header -> Value. Body.</span>
+			</div>
+			<div class="container">
+				<span class="title">POST / GET methods</span>
+				<span class="description">POST uploads input in the body of the request.</span>
+			GET uploads input in URL field of the request.
+			</div>
+			<div class="container">
+				<span class="title">Method types</span>
+				<span class="description">HTTP/1.0 (GET, POST, HEAD. HEAD asks server to leave a requested object out of the response).</span>
+				<span class="description">HTTP/1.1 (GET, POST, HEAD, PUT, DELETE. PUT uploads a file in the body of a request to a path specified in the URL field. DELETE deletes a file specified in the URL field).</span>
+			</div>
+			<div class="container">
+				<span class="title">HTTP response codes</span>
+				<span class="description">200 OK, request succeeded, requested object provided.</span>
+				<span class="description">301 Moved Permanently, requested object has moved, new location provided.</span>
+				<span class="description">304 Not Modified, content requested has not been modified.</span>
+				<span class="description">400 Bad Request, request message not understood.</span>
+				<span class="description">404 Not Found, requested object was not found.</span>
+				<span class="description">505 HTTP Version Not Supported.</span>
+			</div>
+			<div class="container">
+				<span class="title">Conditional GET</span>
+				<span class="description">Check cache for object, if object exists and the one on the server hasn’t been modified since the cached one, then use the cache.</span>
+			</div>
+			<div class="container">
+				<span class="title">DNS (Domain Name System)</span>
+				<span class="description">Distributed database implemented in a hierarchy of many name servers. Database used to convert hostnames to IP addresses. Database divided by top-level domain (TLD) servers, such as .com, .org, .net etc. Authoritative DNS servers are maintained by an organization or service provider for internal hosts.</span>
+			</div>
+			<div class="container">
+				<span class="title">Iterated query</span>
+				<span class="description">DNS server replies with another server’s address if it can’t find the requested hostname’s IP.</span>
+			</div>
+			<div class="container">
+				<span class="title">Recursive query</span>
+				<span class="description">DNS server has to resolve the hostname.</span>
+			</div>
+			<div class="container">
+				<span class="title">DNS record</span>
+				<span class="description">Name, value, type, TTL. The type can be A (name is hostname, value is IP), CNAME (name is alias name for the real name, value is the real name), NS (name is domain, value is hostname of authoritative DNS server), MX (value is the name of the mail server associated with name).</span>
+			</div>
+			<div class="container">
+				<span class="title">DNS protocol messages</span>
+				<span class="description">Query and reply messages, both have the same format. Message header has identification (16 bit number for query, reply uses the same number) and flags (query or reply, recursion desired, recursion available, reply is authoritative).</span>
+			</div>
+			<span class="heading">Transport Layer (#NTL)</span>
+			<div class="container">
+				<span class="title">Services</span>
+				<span class="description">Provide logical communication between app processes running on different hosts. Protocols run in end systems (send side breaks messages into segments and passes them to the network layer, the receiver side reassembles the segments into messages and passes them to the app layer). More than one transport protocol available to apps (internet uses TCP and UDP).</span>
+			</div>
+			<div class="container">
+				<span class="title">Transport layer vs network layer</span>
+				<span class="description">Network layer provides logical communication between hosts, transport layer provides logical communication between processes, but relies on and enhances network layer services.</span>
+			</div>
+			<div class="container">
+				<span class="title">Multiplexing and demultiplexing</span>
+				<span class="description">Sender handles data from multiple sockets, adds transport header. Receiver uses the header info to deliver received segments to correct socket.</span>
+			</div>
+			<div class="container">
+				<span class="title">Demultiplexing</span>
+				<span class="description">Host receives IP datagrams (contains source IP, destination IP, and one transport-layer segment. Each segment has a source port number, and a destination port). Host uses IP and port number to direct segment to appropriate socket.</span>
+			</div>
+			<div class="container">
+				<span class="title">Socket API</span>
+				<span class="description">Used by server and client to exchange messages over the network using TCP or UDP.</span>
+			</div>
+			<div class="container">
+				<span class="title">Connection-oriented demultiplexing</span>
+				<span class="description">TCP socket identified by 4-tuple (source IP, source port, destination IP, destination port). Receiver uses all four values to direct segment to appropriate socket. Server host may support simultaneous TCP sockets, with each socket being identified by its own 4-tuple. Web servers have different sockets for each client, non-persistent HTTP has different socket for each request.</span>
+			</div>
+			<div class="container">
+				<span class="title">UDP checksum</span>
+				<span class="description">Used to detect errors (like flipped bits) in a segment. Sender puts the checksum of segment contents into the UDP checksum field. The receiver checks to see if the checksum sent is the same as the computed checksum.</span>
+			</div>
+			<div class="container">
+				<span class="title">TCP overview</span>
+				<span class="description">Point-to-point (one sender, one receiver), reliable (in-order byte stream, so no message boundaries), pipelined (TCP congestion and flow control set window size), full duplex data (bi-directional data flow in same connection, maximum segment size or MSS), connection oriented (handshaking), flow controlled (throttling so the sender doesn’t overwhelm the receiver).</span>
+			</div>
+			<div class="container">
+				<span class="title">TCP flags</span>
+				<span class="description">FIN (gracefully terminate a connection). SYN (establish a new session). RST (abort a session). PSH (push data). ACK (acknowledge the receipt of data). URG (urgent data being sent).</span>
+			</div>
+			<div class="container">
+				<span class="title">TCP sequence numbers</span>
+				<span class="description">Byte stream number of first byte in segment’s data, acknowledgment (sequence number of next byte is expected from the other end, cumulative ACK). Initial sequence number is randomly generated, then the next sequence number is the current one added with the segment length.</span>
+			</div>
+			<div class="container">
+				<span class="title">TCP connection</span>
+				<span class="description">Established with a three-way handshake (client sends server SYN, server sends ACK and SYN, client sends ACK).</span>
+			</div>
+			<div class="container">
+				<span class="title">TCP data transfer</span>
+				<span class="description">Creates reliable transfer service on top of IP’s unreliable service. Pipelined segments, cumulative ACKs, single retransmission timer. Retransmission is triggered by timeout events or duplicate ACKs. Usually a long delay before resending a lost packet. If there are duplicate ACKs, then the sender knows a segment was lost.</span>
+			</div>
+			<div class="container">
+				<span class="title">TCP timeout</span>
+				<span class="description">Longer than RTT. If it’s too short, then unnecessary retransmissions will occur due to a premature timeout. If it’s too long, then there won’t be a quick enough reaction to segment losses. Estimated RTT is 1 take away a, where a is usually 0.125, multiplied by the estimated RTT added with a multiplied by the Sample RTT (measured time from segment transmission until ACK receipt). So (1 - a) * EstimatedRTT + a * SampleRTT. TimeoutInterval is Estimated RTT added with 4 multiplied by the Deviation RTT, which is the SampleRTT  deviation from the Estimated RTT. Deviation RTT is (1 - b) * DevRTT + B * SampleRTT - EstimatedRTT where b usually 0.25.</span>
+			</div>
+			<div class="container">
+				<span class="title">TCP flow control</span>
+				<span class="description">The receiver side of a TCP connection has a buffer. The buffer has a receiver window, which is the amount of free space the buffer has. The data comes from the IP, goes into the buffer, and then gets transmitted to the application process. The window is calculated by taking the total buffer, and taking away the addition of the last byte received, and the last byte read. The receiver tells the sender how much free space there is by including the receiver window (RcvWindow) in the segment. Sender limits its unACKed data to the receiver window size, so that the buffer doesn’t overflow.</span>
+			</div>
+			<div class="container">
+				<span class="title">TCP congestion control</span>
+				<span class="description">Too many sources sending too much data too fast for the network to handle. Different from flow control. Causes lost packets (buffer overflow at routers), and long delays (queuing in router buffers). There are two approaches to congestion control; additive increase (increase congestion window by 1 maximum segment size every RTT until loss is detected), and multiplicative decrease (cut congestion window in half after loss). Sender limits transmission. </span>
+			</div>
+			<div class="container">
+				<span class="title">TCP sending rate</span>
+				<span class="description">Send congestion window bytes, wait RTT for ACKs, then send more bytes. So the rate is the congestion window divided by the RTT, and it’s measured in bytes per second.</span>
+			</div>
+			<div class="container">
+				<span class="title">TCP slow start</span>
+				<span class="description">When a connection is established, increase the rate exponentially until a segment is lost. Initially, the congestion window would be 1 maximum segment size, which is then doubled every RTT, which is done by incrementing the congestion window for every ACK received. So the initial rate is slow, but ramps up exponentially fast. It’s an aggressive approach. There is a threshold, and on a timeout, it equals the congestion window divided by 2. When the congestion window is bigger than or equal to the threshold, then congestion avoidance kicks in and the congestion window grows linearly. This is a more conservative approach. </span>
+			</div>
+		</div>
+	</body>
+</html>
