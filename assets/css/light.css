@@ -1,0 +1,128 @@
+:root {
+	--shadow-dark:0 6px 10px rgba(40,40,40,0.2);
+	--shadow-darker:0 6px 10px rgba(40,40,40,0.4);
+	--font-family:'Helvetica Neue', 'Lucida Grande', 'Tahoma', 'Verdana', 'Arial', sans-serif;
+}
+html {
+	font-family:var(--font-family);
+}
+body {
+	background:rgb(230,230,230);
+	color:rgb(75,75,75);
+	margin:0;
+	padding:0;
+	overflow:visible;
+}
+a {
+	text-decoration:none;
+}
+.noselect {
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+
+.cards-wrapper {
+	font-size:0;
+	padding-top:20px;
+	width:100%;
+	height:auto;
+	display:block;
+}
+.card {
+	display:inline-block;
+	width:calc(33.3333% - 40px - 27px);
+	padding:20px;
+	margin:0 0 20px 20px;
+	float:left;
+	height:80px;
+	background:rgb(250,250,250);
+	transition:box-shadow 0.25s;
+	box-shadow:var(--shadow-dark);
+	vertical-align:top;
+	overflow:hidden;
+	cursor:pointer;
+	border-radius:10px;
+}
+.card:hover {
+	box-shadow:var(--shadow-darker);
+}
+.card-divider {
+	display:block;
+	margin:0 0 20px 20px;
+	background:rgb(40,40,40);
+	color:rgb(245,245,245);
+	border-radius:10px;
+	overflow:hidden;
+	font-size:24px;
+	text-align:center;
+	font-weight:bold;
+	padding:20px;
+	width:calc(100% - 40px - 40px);
+	box-shadow:var(--shadow-dark);
+}
+.card-title {
+	font-size:18px;
+	display:block;
+	width:100%;
+	font-weight:bold;
+	color:rgb(75,75,75);
+}
+.card-subtitle {
+	font-size:14px;
+	display:block;
+	width:100%;
+	margin-top:10px;
+	color:rgb(75,75,75);
+}
+
+.notes-wrapper {
+	text-align:center;
+}
+.notes-heading {
+	display:inline-block;
+	margin-bottom:20px;
+	background:rgb(40,40,40);
+	color:rgb(245,245,245);
+	border-radius:10px;
+	overflow:hidden;
+	font-size:24px;
+	font-weight:bold;
+	padding:20px;
+	width:calc(100% - 40px - 40px);
+	box-shadow:var(--shadow-dark);
+}
+.notes-heading:first-of-type {
+	margin-top:20px;
+}
+.notes-container {
+	display:inline-block;
+	margin-bottom:20px;
+	background:rgb(250,250,250);
+	border-radius:10px;
+	overflow:hidden;
+	padding:20px 20px 10px 20px;
+	width:calc(100% - 40px - 40px);
+	transition:box-shadow 0.25s;
+	box-shadow:var(--shadow-dark);
+}
+.notes-container:hover {
+	box-shadow:var(--shadow-darker);
+}
+.notes-title {
+	display:block;
+	font-weight:bold;
+	text-align:left;
+	margin-bottom:10px;
+	color:rgb(75,75,75);
+}
+.notes-description {
+	display:block;
+	text-align:left;
+	margin-bottom:10px;
+	line-height:25px;
+	color:rgb(75,75,75);
+}
