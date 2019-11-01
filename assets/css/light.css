@@ -50,8 +50,27 @@ a {
 .card:hover {
 	box-shadow:var(--shadow-darker);
 }
+.back-icon, .help-icon {
+	width:48px;
+	height:48px;
+	padding:11px;
+	margin-left:20px;
+	background:rgb(40,40,40);
+	fill:rgb(245,245,245);
+	border-radius:10px;
+	display:inline-block;
+	vertical-align:top;
+	cursor:pointer;
+	transition:background 0.25s, box-shadow 0.25s;
+	box-shadow:var(--shadow-dark);
+}
+.back-icon:hover, .help-icon:hover {
+	background:rgb(20,20,20);
+	box-shadow:var(--shadow-darker);
+}
 .card-divider {
-	display:block;
+	display:inline-block;
+	vertical-align:top;
 	margin:0 0 20px 20px;
 	background:rgb(40,40,40);
 	color:rgb(245,245,245);
@@ -60,8 +79,9 @@ a {
 	font-size:24px;
 	text-align:center;
 	font-weight:bold;
-	padding:20px;
-	width:calc(100% - 40px - 40px);
+	line-height:70px;
+	padding:0;
+	width:calc(100% - 40px - 20px - 70px);
 	box-shadow:var(--shadow-dark);
 }
 .card-title {
@@ -80,27 +100,30 @@ a {
 }
 
 .notes-wrapper {
-	text-align:center;
+	padding-top:20px;
 }
 .notes-heading {
 	display:inline-block;
-	margin-bottom:20px;
+	vertical-align:top;
+	margin:0 0 20px 20px;
 	background:rgb(40,40,40);
 	color:rgb(245,245,245);
 	border-radius:10px;
 	overflow:hidden;
 	font-size:24px;
+	text-align:center;
 	font-weight:bold;
-	padding:20px;
-	width:calc(100% - 40px - 40px);
+	line-height:70px;
+	padding:0;
+	width:calc(100% - 40px);
 	box-shadow:var(--shadow-dark);
 }
 .notes-heading:first-of-type {
-	margin-top:20px;
+	width:calc(100% - 40px - 20px - 70px - 4px);
 }
 .notes-container {
 	display:inline-block;
-	margin-bottom:20px;
+	margin:0 0 20px 20px;
 	background:rgb(250,250,250);
 	border-radius:10px;
 	overflow:hidden;
