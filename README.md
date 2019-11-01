@@ -1,4 +1,4 @@
-## Q&A to explain the goal with this repository.
+## Q&A to explain the goal of this repository.
 
 ### What is this repository?
 
