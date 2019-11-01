@@ -1,4 +1,4 @@
-document.addEventLister("DOMContentLoaded", function(e) {
+document.addEventListener("DOMContentLoaded", function(e) {
 	var cache = false;
 	if(!cache) {
 		var link_elements = document.getElementsByTagName("link");
