@@ -118,7 +118,11 @@ a {
 	width:calc(100% - 40px);
 	box-shadow:var(--shadow-dark);
 }
-.notes-heading:first-of-type {
+.notes-heading.one-icon {
+	width:calc(100% - 40px - 20px - 70px);
+	margin:0 0 20px 16px;
+}
+.notes-heading.two-icons {
 	width:calc(100% - 40px - 20px - 70px - 70px - 26px);
 	margin:0 0 20px 16px;
 }
