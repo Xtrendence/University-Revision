@@ -133,9 +133,6 @@ a {
 	transition:box-shadow 0.25s;
 	box-shadow:var(--shadow-dark);
 }
-.notes-container:hover {
-	box-shadow:var(--shadow-darker);
-}
 .notes-title {
 	display:block;
 	font-weight:bold;
