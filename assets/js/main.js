@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
 		}
 		document.getElementsByClassName("js-file")[0].src = document.getElementsByClassName("js-file")[0].src + "?" + epoch();
 	}
+	if(document.getElementsByClassName("card").length == 0) {
+		document.getElementsByClassName("card-divider")[0].textContent = "No Notes Found";
+	}
 	// Get the current UNIX timestamp.
 	function epoch() {
 		var date = new Date();
