@@ -50,7 +50,7 @@ a {
 .card:hover {
 	box-shadow:var(--shadow-darker);
 }
-.back-icon, .help-icon {
+.back-icon, .help-icon, .edit-icon {
 	width:48px;
 	height:48px;
 	padding:11px;
@@ -64,7 +64,7 @@ a {
 	transition:background 0.25s, box-shadow 0.25s;
 	box-shadow:var(--shadow-dark);
 }
-.back-icon:hover, .help-icon:hover {
+.back-icon:hover, .help-icon:hover, .edit-icon:hover {
 	background:rgb(20,20,20);
 	box-shadow:var(--shadow-darker);
 }
@@ -119,7 +119,7 @@ a {
 	box-shadow:var(--shadow-dark);
 }
 .notes-heading:first-of-type {
-	width:calc(100% - 40px - 20px - 70px);
+	width:calc(100% - 40px - 20px - 70px - 70px - 26px);
 	margin:0 0 20px 16px;
 }
 .notes-container {
