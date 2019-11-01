@@ -1,0 +1,10 @@
+@media screen and (max-width:800px) {
+	.card {
+		width:calc(50% - 40px - 31px);
+	}
+}
+@media screen and (max-width:480px) {
+	.card {
+		width:calc(100% - 40px - 40px);
+	}
+}
