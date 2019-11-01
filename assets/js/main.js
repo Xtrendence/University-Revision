@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 				link_elements[i].href = link_elements[i].href + "?" + epoch();
 			}
 		}
-		document.getElementsByClassName("js-file")[0].href = document.getElementsByClassName("js-file")[0].href + "?" + epoch();
+		document.getElementsByClassName("js-file")[0].src = document.getElementsByClassName("js-file")[0].src + "?" + epoch();
 	}
 	// Get the current UNIX timestamp.
 	function epoch() {
