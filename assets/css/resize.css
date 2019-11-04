@@ -3,7 +3,10 @@
 		width:calc(50% - 40px - 31px);
 	}
 }
-@media screen and (max-width:480px) {
+@media screen and (max-width:620px) {
+	.notes-heading {
+		font-size:20px;
+	}
 	.card {
 		height:120px;
 	}

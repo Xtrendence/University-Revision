@@ -114,16 +114,19 @@ a {
 	text-align:center;
 	font-weight:bold;
 	line-height:70px;
-	padding:0;
-	width:calc(100% - 40px);
+	padding:0 10px 0 10px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	width:calc(100% - 40px - 20px);
 	box-shadow:var(--shadow-dark);
 }
 .notes-heading.one-icon {
-	width:calc(100% - 40px - 20px - 70px);
+	width:calc(100% - 40px - 20px - 70px - 20px);
 	margin:0 0 20px 16px;
 }
 .notes-heading.two-icons {
-	width:calc(100% - 40px - 20px - 70px - 70px - 26px);
+	width:calc(100% - 40px - 20px - 70px - 70px - 26px - 20px);
 	margin:0 0 20px 16px;
 }
 .notes-container {
