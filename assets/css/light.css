@@ -159,6 +159,6 @@ a {
 	border-radius:5px;
 	transition:background 0.25s;
 }
-.notes-container:hover .notes-description {
+.notes-description:hover {
 	background:none !important;
 }
