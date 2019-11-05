@@ -68,6 +68,9 @@ a {
 	background:rgb(20,20,20);
 	box-shadow:var(--shadow-darker);
 }
+.edit-icon.active {
+	fill:rgb(240,100,50);
+}
 .card-divider {
 	display:inline-block;
 	vertical-align:top;
@@ -153,4 +156,9 @@ a {
 	margin-bottom:10px;
 	line-height:25px;
 	color:rgb(75,75,75);
+	border-radius:5px;
+	transition:background 0.25s;
+}
+.notes-container:hover .notes-description {
+	background:none !important;
 }

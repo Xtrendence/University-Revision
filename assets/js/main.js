@@ -12,6 +12,22 @@ document.addEventListener("DOMContentLoaded", function(e) {
 	if(document.getElementsByClassName("card").length == 0 && document.getElementsByClassName("cards-wrapper").length > 0) {
 		document.getElementsByClassName("card-divider")[0].textContent = "No Notes Found";
 	}
+	if(document.getElementsByClassName("notes-description").length > 0) {
+		document.getElementsByClassName("edit-icon")[0].addEventListener("click", function() {
+			if(this.classList.contains("active")) {
+				this.classList.remove("active");
+				for(i = 0; i < document.getElementsByClassName("notes-description").length; i++) {
+					document.getElementsByClassName("notes-description")[i].style.background = "none";
+				}
+			}
+			else {
+				this.classList.add("active");
+				for(i = 0; i < document.getElementsByClassName("notes-description").length; i++) {
+					document.getElementsByClassName("notes-description")[i].style.background = "rgb(75,75,75)";
+				}
+			}
+		});
+	}
 	// Get the current UNIX timestamp.
 	function epoch() {
 		var date = new Date();
