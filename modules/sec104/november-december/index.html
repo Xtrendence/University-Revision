@@ -135,6 +135,103 @@
 				<span class="notes-title">Mobile Device Management (MDM)</span>
 				<span class="notes-description">OTA distribution of data, applications, and settings. Controls data and settings to reduce risk.</span>
 			</div>
+			<span class="notes-heading">Network Layer</span>
+			<div class="notes-container">
+				<span class="notes-title">Network layer</span>
+				<span class="notes-description">Transports segment from a host that's sending it, to one that's receiving it. On the sender's side, the segments are encapsulated into datagrams. On the receiver's side, the segments are delivered to the transport layer. Every host and router has a network layer. The router examines the header fields of every IP datagram.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Important functions</span>
+				<span class="notes-description">Forwarding (move packets from the router's input, to the appropriate output), routing (determine the route taken by the packets from their source, to their destination using routing algorithms).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Planes</span>
+				<span class="notes-description">Data plane: Local and per-router function, determines how a datagram moves from the router's input port to its output port, forwarding function.</span>
+				<span class="notes-description">Control plane: Network-wide logic, determines how a datagram is routed between routers along an end-to-end path between the source and the destination. There are two control plane approaches: traditional routing algorithms that are implemented by routers, and software-defined networking (SDN), which are implemented in [remote] servers.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">The traditional approach</span>
+				<span class="notes-description">Individual routing algorithm components in each router that interact with the control plane.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">SDN approach</span>
+				<span class="notes-description">A logically centralized control plane, where a remote controller interacts with local Control Agents (CAs).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Layer functions</span>
+				<span class="notes-description">Routing protocols: Path selection, RIP (routing information protocol), OSPF (open shortest path first), BGP (border gateway protocol).</span>
+				<span class="notes-description">Forwarding table</span>
+				<span class="notes-description">IP protocol: Addressing conventions, datagram format, packet handling conventions.</span>
+				<span class="notes-description">ICMP protocol: Error reporting, router signaling.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">IP datagram format (IPv4)</span>
+				<span class="notes-description">Minimum header length: 20 bytes.</span>
+				<span class="notes-description">Maximum header length: 24 bytes.</span>
+				<span class="notes-description">Fields: IP protocol version, header length (in bytes), type of data, total datagram length (in bytes), fragment offset (for reassembly), flags, 16-bit ID, TTL (time to live, maximum number of remaining "hops", which is decremented each time it passes through a router), upper layer protocol to deliver the payload to, header checksum, 32-bit source IP, 32-bit destination IP, options (timestamp, recorded route, list of routers to visit), data (typically a UDP or TCP segment).</span>
+				<span class="notes-description">Overhead: 20 bytes for TCP, 20 bytes for IP, so 40 bytes in addition to the app layer overhead.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">IP fragmentation and reassembly</span>
+				<span class="notes-description">Network links have a max transmission unit (MTU), which determines the largest possible link-level frame. Different link types have different MTUs.</span>
+				<span class="notes-description">Large IP datagrams are fragmented and broken up into several datagrams. They are then sent to their destination, where they are finally reassembled. The header fields (particularly the 16-bit identifier) are used to determine the order of the datagrams and subsequently reassemble them.</span>
+				<span class="notes-description">The offset of a datagram is determined by dividing its length (minus the header length) by 8 (to get the length in bits), and then multiplying it by its position relative to the other datagrams. So for example, a 4,000 byte datagram on a link with a 1,500 MTU would be broken up into 3. The first datagram would have a length of 1,500 or 1,480 without the header, and its offset would be 1,480 / 8 * 0, which is 0 since it's the first one and doesn't have an offset. The second one's offset would be 185, and the third one would be 370.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">IP addressing</span>
+				<span class="notes-description">IP address: 32-bit identifier for a host, router, or interface. Written in decimal notation.</span>
+				<span class="notes-description">Interface: The connection between a host or router, and the physical link. Routers usually have multiple interfaces, and hosts usually have one or two (wireless 802.11, or wired ethernet).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Subnets</span>
+				<span class="notes-description">The device interfaces with the same subnet part of the IP address, and the devices can physically reach each other without intervening the router. The devices of a subnet all have the same subnet address, and are part of an isolated network, or a sub-network.</span>
+				<span class="notes-description">IP address: Subnet part (high order bits), and host part (low order bits).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Classful addressing</span>
+				<span class="notes-description">Addresses consist of a network part, and a host part. IP addresses are divided into five classes (A, B, C, D, and E). Classes A, B, and C have a fixed length for their network part (8, 16, and 24 bits respectively).</span>
+				<span class="notes-description">The first decimal value of an IP address of class A is between 0 and 127. For class B it's between 128 and 191. For class C it's between 192 and 223.</span>
+				<span class="notes-description">Class C can support 254 hosts, which might not be enough for an organization. Class B can support 65,634, which might be too many.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">DHCP</span>
+				<span class="notes-description">Allows hosts to dynamically acquire an IP address when joining the network.</span>
+				<span class="notes-description">Leases can be renewed on an address, and addresses can be reused.</span>
+				<span class="notes-description">Can return the address of the first hop router, the name and IP of a DNS server, and the network mask.</span>
+				<span class="notes-description">ISPs get IP addresses through ICANN, which allocates addresses, manages DNS servers, assigns domain names, and resolves disputes.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">NAT (Network Address Translation)</span>
+				<span class="notes-description">All datagrams leaving a local network have the same NAT IP address, but may have different source port numbers. This way, the ISP doesn't need to assign a range of IP addresses to each user.</span>
+				<span class="notes-description">A NAT router must replace the source IP and port of every outgoing datagram to the NAT IP and new port, remember (using a NAT translation table) every replacement and translation pair, and replace the NAT IP and port of every incoming datagram with the original source IP and port.</span>
+				<span class="notes-description">NAT is problematic because routers should only process up to layer 3, and it violates the end-to-end agreement where ports are meant to be used to address processes rather than hosts.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Routing protocol</span>
+				<span class="notes-description">Used to determine the best path or route from the sender to the receiver.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Routing algorithm classification</span>
+				<span class="notes-description">Global information: All routers have complete topology and link cost information (link state algorithms).</span>
+				<span class="notes-description">Decentralized information: Routers know physically connected neighbors, and the link cost to said neighbors, leading to an iterative process of computation, and exchange of information with neighbors (distance vector algorithms).</span>
+				<span class="notes-description">Static routes: Routes change slowly over time.</span>
+				<span class="notes-description">Dynamic routes: Routes change more quickly in response to link cost changes, periodical updates.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">ICMP (Internet Control Message Protocol)</span>
+				<span class="notes-description">Constructed at the IP layer, reports non-transient problems to the IP (when TTL reaches 0, or a destination host is unreachable), and to the transport layer (for example when a port is unreachable). ICMP is used by "traceroute" and "ping".</span>
+				<span class="notes-description">ICMP messages are encapsulated inside IP datagrams, where they have header fields such as type (type of ICMP message), code (reason why the packet couldn't be delivered), checksum (to verify the integrity of the data).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">ICMP message types</span>
+				<span class="notes-description">Echo (8) (used by ping to test the connection between two devices), echo reply (0) (reply to a ping, a "pong"), destination unreachable (3) (unavailable port, network, etc.), source quench (4) (data source should reduce its transmission rate), redirect (5) (informs the source of a better route), time exceeded (11) (when TTL reaches 0), parameter problem on a datagram (12), timestamp request (13), timestamp reply (14), address mask request (17), address mask reply (18).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">How traceroute uses ICMP</span>
+				<span class="notes-description">The source sends a series of UDP segments to a destination. The first set has a TTL of 1, then 2, and so on.</span>
+				<span class="notes-description">When the datagram of the nth set arrives to the nth router, the router discards of the datagram, and sends the source an ICMP message containing the name of the router, and its IP address. When the message arrives, the source records the RTTs (Round Trip Time).</span>
+				<span class="notes-description">If the UDP segment arrives at its destination, or if the destination returns an ICMP "port unreachable" message, the source stops.</span>
+			</div>
 		</div>
 	</body>
 </html>
