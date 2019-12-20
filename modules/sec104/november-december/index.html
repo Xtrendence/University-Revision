@@ -24,10 +24,117 @@
 			</a>
 			<span class="notes-heading two-icons">Social Engineering &amp; Phishing</span>
 			<svg class="edit-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"/></svg>
-			<!-- <div class="notes-container">
-				<span class="notes-title"></span>
-				<span class="notes-description"></span>
-			</div> -->
+			<div class="notes-container">
+				<span class="notes-title">What social engineering is</span>
+				<span class="notes-description">Techniques that exploit human weaknesses, and manipulate people into breaking security procedures.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Why it's done</span>
+				<span class="notes-description">Easier to exploit people rather than a computer system. Organizations often overlook this by not providing adequate training to staff, and not testing the staff to ensure they aren't susceptible to being exploited.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Potential triggers</span>
+				<span class="notes-description">Authority (attacker exploits the target through the assertion of authority), commitment and consistency (targets likely have a behavioral pattern that can be exploited), liking and similarity (attackers make the target like them and relate to them), reciprocation (the target is given something, so they feel obligated to give back), scarcity (the target is told that something they want is in short supply), social validation (targets may try to conform to societal standards).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Methods and approaches</span>
+				<span class="notes-description">Over the phone (tech support), in person (service engineer, dropped drive), email (malware, phishing).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Methods to get details</span>
+				<span class="notes-description">Dumpster diving, talking to people, social networks, spear-phishing (targetted phishing), </span>
+			</div>
+			<span class="notes-heading">Authentication</span>
+			<div class="notes-container">
+				<span class="notes-title">Users should be identified</span>
+				<span class="notes-description">To access user-specific controls, and so they can individually be held accountable for their activities.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Claimed identities must be authenticated</span>
+				<span class="notes-description">It's the first line of system protection, and acts as a safeguard against abuse by unauthorized insiders, and external parties.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Authentication methods</span>
+				<span class="notes-description">Something the user knows (passwords, PIN numbers), something the user has (a card or token), something the user is (biometric).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Passwords</span>
+				<span class="notes-description">Pros: Easy to understand, familiar, work in most contexts.</span>
+				<span class="notes-description">Cons: Hard to use, remember, and manage, inconvenient, time-consuming.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Password practices</span>
+				<span class="notes-description">At least 8 characters, alphanumeric, includes special characters, dictionary word, personal information, reused.</span>
+				<span class="notes-description">Most common: At least 8 characters (under 18s), alphanumeric (over 18s).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">How passwords are often cracked</span>
+				<span class="notes-description">Interception, brute force, searching, manual guessing, social engineering, stealing, shoulder surfing, key logging.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Shortcomings of cognitive challenges</span>
+				<span class="notes-description">Opinion based security questions can change over time, some predetermined questions might not apply to some users, others might be able to guess or already know the answer. Picture passwords might be weak since the image might have clear points of interest.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Comparison factors</span>
+				<span class="notes-description">Mental effort, convenience, applicability (works across systems), flexibility (in case the user needs to change it).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Token-based authentication</span>
+				<span class="notes-description">Pros: Can't be shared easily, increased awareness of any potential compromises, attackers must steal the token before being able to use it.</span>
+				<span class="notes-description">Cons: More expensive to implement, tokens can be lost or stolen, might be combined with secret knowledge.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Biometrics</span>
+				<span class="notes-description">Pros: Nothing to lose or forget, more usable.</span>
+				<span class="notes-description">Cons: May not be usable in all contexts, privacy concerns.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Desirable attributes for biometric-based authentication</span>
+				<span class="notes-description">Uniqueness, universal, permanence, collectable, acceptable, secure.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Biometric approaches</span>
+				<span class="notes-description">Physiological: Fingerprint, hand geometry, vascular pattern, iris scanning, retinal scanning, facial recognition, facial thermogram, ear print.</span>
+				<span class="notes-description">Behavioral: Voice, signature, keystroke analysis, mouse dynamics, gait recognition, stylometry.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Perceived protection</span>
+				<span class="notes-description">Most secure: Fingerprint, retinal scan, password, PIN, facial recognition, handprint, voice recognition, none, heartbeat.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Error rates and operational factors</span>
+				<span class="notes-description">FAR (false acceptance rate), FRR (false rejection rate), failure to enroll, failure to acquire.</span>
+			</div>
+			<span class="notes-heading">Mobile Device Security</span>
+			<div class="notes-container">
+				<span class="notes-title">Threats</span>
+				<span class="notes-description">More prone to theft and loss, fewer and less capable security measures, users are less likely to secure them.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Most common ways organizations deal with the risks</span>
+				<span class="notes-description">Mobile computing policy, mobile device security strategy, implemented mobile device management (MDM), encryption.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Protection against theft and loss</span>
+				<span class="notes-description">Using "Lost Mode" to find the device, remotely wipe its data, or lock it to prevent further unauthorized access.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Mobile malware</span>
+				<span class="notes-description">Less common than desktop, but Android devices are a popular target.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Types of mobile malware</span>
+				<span class="notes-description">Banking trojan (overlays legitimate apps and websites with a fake one), SMS trojan, ransomware, backdoors, spyware.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Device ownership dilemma</span>
+				<span class="notes-description">Having corporate data on a personal device would mean that the corporation can't control the device, which could compromise the security of the device. Having personal data on a corporate device would lead to usage issues, as some usage might be considered inappropriate, and the user's personal data might find its way into the organization.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Mobile Device Management (MDM)</span>
+				<span class="notes-description">OTA distribution of data, applications, and settings. Controls data and settings to reduce risk.</span>
+			</div>
 		</div>
 	</body>
 </html>
