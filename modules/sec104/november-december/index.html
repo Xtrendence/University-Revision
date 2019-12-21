@@ -314,6 +314,62 @@
 				<span class="notes-description">The student then visists Google. Before sending the HTTP request, a DNS query is created, encapsulated in UDP, then IP, then ethernet, and sent to the router, but first, the client needs the MAC address of the router interface, so an ARP query is broadcasted, received by the router, and the client now knows the MAC address of the first-hop router, which they use to send the frame containing the DNS query. The IP datagram containing the DNS query is forwarded via the LAN switch from the client to the first-hop router, where the datagram is then forwarded from the campus network to the ISP, and then routed to the DNS server, where it is demuxed. The DNS server then replies to the client with the IP address of Google.</span>
 				<span class="notes-description">The client then opens a TCP socket to the web server, and a TCP SYN segment (first step in a 3-way handshake) is routed to the web server. The server respons with a TCP SYN ACK, and a connection is established. The HTTP request is then sent into the TCP socket, and the IP datagram containing the HTTP request is routed to Google, where the web server responds with the HTTP reply which contains the webpage. The IP datagram containing this reply is then routed back to the client, and the webpage is displayed.</span>
 			</div>
+			<span class="notes-heading">Wireless Networks</span>
+			<div class="notes-container">
+				<span class="notes-title">Elements of a wireless network</span>
+				<span class="notes-description">Hosts: Laptops, smartphones, applications etc.</span>
+				<span class="notes-description">Base station: Typically connected to a wired network, relay (responsible for sending packets between wired network and wireless hosts in its area) such as cell towers, 802.11 access points etc.</span>
+				<span class="notes-description">Wireless link: Typically used to connect mobiles to the base station. Also used as a backbone link. Multiple access protocol coordinates link access. Various data rates and transmission distances.</span>
+				<span class="notes-description">Infrastructure mode: Base station connects mobiles to the wired network. Handoff (mobile changes base station, providing connection into the wired network).</span>
+				<span class="notes-description">Ad hoc mode: No base stations, nodes can only transmit to other nodes within link coverage, nodes organize themselves into a network (route among themselves).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Wireless links</span>
+				<span class="notes-description">Unlicensed frequency bands: Commonly used Industrial, Scientific, Medical (ISM) bands. 433.05 - 434.79 MHz. 868.00 - 870.00 MHz (not the entire spectrum can be used). 2.4 - 2.5 GHz. 5.15 - 5.35 and 5.725 - 5.875 GHz. ISM, no license required, no exclusive use, possible interference, best effort.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Radio frequency transmission</span>
+				<span class="notes-description">Higher data rates have a shorter transmission range. Higher transmit power results in greater distance. Higher frequency allows for higher data rates (but shorter transmission range). Distortion types include path loss (the further away a device is from the signal source, the weaker the signal it receives), absorption (caused by objects being in the way, higher amplitude results in higher power and better coverage), multipath (portions of the signal are reflected and arrive at a later time, which could cause the receiver to get multiple copies of the same signal).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Difference between wireless and wired links</span>
+				<span class="notes-description">Decreased signal strength, interference from other sources, multipath propogation.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">SNR (Signal to Noise Ratio) and BER (Bit Error Ratio)</span>
+				<span class="notes-description">Larger SNR: Easier to extract signal from noise.</span>
+				<span class="notes-description">SNR vs BER: Given physical layer (increase in power leads to increase in SNR, which decreases BER).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">IEEE 802.11 wireless LAN (WLAN)</span>
+				<span class="notes-description">802.11b: 2.4 - 2.5 GHz unlicensed spectrum, up to 11 Mbps.</span>
+				<span class="notes-description">802.11a: 5.0 - 6.0 GHz, up to 54 Mbps.</span>
+				<span class="notes-description">802.11g: 2.4 - 2.5 GHz, up to 54 Mbps.</span>
+				<span class="notes-description">802.11n: 2.4 - 2.5 GHz, up to 200 Mbps.</span>
+				<span class="notes-description">They all use CSMA/CA for multiple access, and all have base stations and ad hoc network versions.</span>
+				<span class="notes-description">Architecture: Wireless host communicates with the base station (access point). Basic service set (BSS or cell) in infrastructure mode contains wireless hosts, the base station, and ad hoc mode (hosts only).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">802.11 channels</span>
+				<span class="notes-description">802.11b (2.4 - 2.485 GHz) spectrum divided into 11 channels at different frequencies. The access point (AP) admin can choose the frequency. Interference is possible if another neighboring AP uses the same channel.</span>
+				<span class="notes-description">Each channel is 22 MHz wide. Channels 1, 6, and 11 are non-overlapping. Using any other channel would cause interference, meaning that three access points can occupy the same area.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">802.11 association</span>
+				<span class="notes-description">Each host must associate with an AP. Scans channels, listening for beacon frames containing the AP's name (Service Set Identifier or SSID) and MAC address. Selects the AP to associate with. May perform authentication. Will typically run DHCP to get an IP address in the AP's subnet.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">802.11 scanning</span>
+				<span class="notes-description">Passive: Beacon frames sent from AP. Association request frame sent from host to AP. Association response frame sent from AP to host.</span>
+				<span class="notes-description">Active: Probe request frame broadcasted from host. Probe response frame sent from AP. Association request sent from host to AP. Association response sent from AP to host.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">802.11 multiple access</span>
+				<span class="notes-description">Avoid collisions (two or more nodes transmitting at the same time).</span>
+				<span class="notes-description">802.11 CSMA (sense before transmitting).</span>
+				<span class="notes-description">802.11 (no collision detection): Difficult to receive (sense collisions) when transmitting due to weak or fading signals. Can't sense all collisions in any case (hidden terminal, fading).</span>
+				<span class="notes-description">CSMA/CA (Carrier Sense Multiple Access / Collision Avoidance).</span>
+			</div>
 		</div>
 	</body>
 </html>
