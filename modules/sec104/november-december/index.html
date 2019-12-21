@@ -232,6 +232,88 @@
 				<span class="notes-description">When the datagram of the nth set arrives to the nth router, the router discards of the datagram, and sends the source an ICMP message containing the name of the router, and its IP address. When the message arrives, the source records the RTTs (Round Trip Time).</span>
 				<span class="notes-description">If the UDP segment arrives at its destination, or if the destination returns an ICMP "port unreachable" message, the source stops.</span>
 			</div>
+			<span class="notes-heading">Link Layer</span>
+			<div class="notes-container">
+				<span class="notes-title">Link layer</span>
+				<span class="notes-description">Hosts and routers are called nodes. Links are communication channels (wired or wireless) that connect adjacent nodes along the communication path. Frames are layer-2 packets that encapsulate datagrams.</span>
+				<span class="notes-description">The data-link layer transfers datagrams from one node to a physically adjacent node over a link.</span>
+				<span class="notes-description">Each and every host has an implementation of the link layer in its adapter (network interface card, chip etc.), and it attaches into the host's system buses, resulting in a combination of hardware, software, and firmware.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Services</span>
+				<span class="notes-description">Framing: Link access (encapsulates datagrams into frames, adds a header and trailer), channel access (if it's a shared medium). MAC address is used in frame headers to identify the source and destination.</span>
+				<span class="notes-description">Reliable delivery between adjacent nodes.</span>
+				<span class="notes-description">Error detection: Errors caused by signal attenuation or noise (the receiver detects errors, and signals the sender for retransmission, or it drops the frame).</span>
+				<span class="notes-description">Error correction: The receiver identifies and corrects bit errors without resorting to retransmission.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Access links</span>
+				<span class="notes-description">Point-to-point links: Link between Ethernet switch and host.</span>
+				<span class="notes-description">Broadcast (shared wire or medium): Old-fashioned Ethernet or 802.11 wireless LAN.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Access protocols</span>
+				<span class="notes-description">Single shared broadcast channel. Interference when there are two or more simultaneous transmissions by nodes (a collision occurs if a node receives two or more signals at the same time).</span>
+				<span class="notes-description">Multiple access protocol: Distributed algorithm that determines how nodes share a channel (for example, determining when a node can transmit). Communication about channel sharing must use the channel itself (no out-of-band channel for coordination).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">MAC protocols</span>
+				<span class="notes-description">Taxonomy: Channel partitioning (divides channels into smaller pieces like time slots and frequency), allocates a channel piece to a node for exclusive use. Random access (channel isn't divided, and allows for collisions, which it can recover from). "Taking turns" (nodes take turns, but nodes with more to send can take longer turns). The channel is shared efficiently, and fairly at high load. It's inefficient at low load, and could lead to a delay in channel access, and bandwidth could be limited and wasted even if there's only 1 node.</span>
+				<span class="notes-description">TDMA (time division multiple access): Access to a channel in rounds. Each station gets a slot of fixed length (where length is the transmission time of the packet) in each round. Unused slots go idle.</span>
+				<span class="notes-description">FDMA (frequency division multiple access): The channel spectrum is divided into frequency bands. Each station is assigned a fixed frequency band. Unused transmission time in frequency bands go idle.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Random access protocols</span>
+				<span class="notes-description">When a node has a packet to send, it transmits at full channel rate, and no "a priori" coordination takes place among nodes. Two or more transmitting nodes lead to a collision. Random access MAC protocol (Carrier Sense Multiple Access or CSMA) specifies how to detect a collision, and how to recover from it (through delayed retransmission).</span>
+				<span class="notes-description">CSMA (carrier sense multiple access): Listen before transmitting (if the channel sensed idle, transmit the entire frame, otherwise, defer the transmission). Collisions (entire packet transmission time wasted) can still occur, and a propogation delay means that two nodes may not be aware of each other's transmission. Distance and propogation delay can be used to determine the probability of a collision.</span>
+				<span class="notes-description">Random access MAC protocols are efficient at low load, as a single node can fully utilize the channel, but are inefficient at high load due to collisions.</span>
+				<span class="notes-description">"Taking turns" protocols are the best of both worlds and work well with both low and high loads.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">CSMA/CD (Carrier Sense Multiple Access / Collision Detection)</span>
+				<span class="notes-description">Collisions are detected within a short time, and the transmission is aborted, reducing channel wastage. Detection is easy in wired LANs as the signal strength can be measured, and transmitted or received signals can be compared. It's more difficult in wireless LAN, as the received signal strength would be overwhelmed by the local transmission strength.</span>
+				<span class="notes-description">Ethernet CSMA/CD algorithm: NIC (network interface card) receives datagram from the network layer and creates a frame. If the NIC senses an idle channel, it starts transmitting the frame. Otherwise, it waits until the channel is idle, and then sends it. If the NIC transmits the entire frame without detecting another transmission, then it'll be done with the frame. If it detects another transmission, then it aborts, and sends a jam signal. After aborting, the NIC enters binary (exponential) backoff (after nth collision, the NIC chooses K at random from 0, 1, 2... 2^m-1, waits K * 512 bit times, and returns to checking if the channel is idle and resending the frame. More collisions would result in a longer backoff interval.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">"Taking turns" MAC protocols</span>
+				<span class="notes-description">Polling: The master node "invites" slave nodes to transmit in turn. Typically used with "dumb" slave devices. There are multiple concerns, such as polling overhead, latency, and the fact that there's a single point of failure since there's a master node.</span>
+				<span class="notes-description">Token passing: A control token is passed from one node to the next sequentially with a token message. The concerns here are token overhead, latency, and there being a single point of failure (the token itself).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">MAC (Media Access Control) addresses</span>
+				<span class="notes-description">32-bit IP addresses are used in the network layer for interfaces and forwarding. MAC (LAN, physical, or Ethernet) addresses are used locally to transmit frames from one interface to another physically connected interface. They are 48-bit (for most LANs) and are burned into the NIC ROM. They're written in hexadecimal notation. Their allocation is administered by IEEE, where the first 24 bits are the OUI (organizationally unique identifier), and the other 24 bits are unique to the NIC.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">ARP (Address Resolution Protocol)</span>
+				<span class="notes-description">ARP table: Each node on the LAN has a table where it has IP/MAC address mappings for LAN nodes, and TTL (time after which the address mappings will be forgotten, typically 20 minutes).</span>
+				<span class="notes-description">If a node A wants to send a datagram to node B, and B's MAC address isn't in A's ARP table, then A broadcasts an ARP query packet containing B's IP address. All nodes on the LAN receive this packet. B would then reply to A with its MAC address (a frame is sent to A's MAC address using unicast). A would then pair B's IP to the MAC address it received, and would save it in its ARP table until the information becomes outdated. ARP provides a sort of "plug and play" support since nodes can create ARP tables without the network administrator having to do it manually.</span>
+				<span class="notes-description">If a node A wants to send a datagram to node B via node R, A would create an IP datagram with the IP source A, and IP destination B. It would then create a link-layer frame with R's MAC address as the destination address, and a frame that contains the A to B IP datagram. The frame would be sent from A to R, where the datagram would be removed, and would be passed up to IP. R would then forward the datagram with IP source A and destination B by creating a link-layer frame with B's MAC address, and the A to B IP datagram.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Ethernet</span>
+				<span class="notes-description">Dominant wired LAN technology. Single chip, multiple speeds. First widely used LAN technology. Simple, cheap, and fast.</span>
+				<span class="notes-description">Physical topology: Bus (popular through mid 90s, all nodes in the same collision domain and can collide with each other), Star (prevalent today, with an active switch in the center, where each "spoke" runs a separate Ethernet protocol and prevents nodes from colliding with one another).</span>
+				<span class="notes-description">Frame structure: The sending adapter encapsulates the IP datagram (or any other network layer protocol packet) in an Ethernet frame, which contains several fields such as a preamble (7 bytes with pattern 10101010 followed by 1 byte with the pattern 10101011, which are used to synchronize the receiver and sender's clock rates), an address (6 byte source and destination MAC addresses), a type (indicates higher layer protocol, mostly IP), a CRC (cyclic redundancy check at receiver, where if an error is detected, the frame is dropped).</span>
+				<span class="notes-description">Physical layer media: Fiber, cable etc.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Ethernet switches</span>
+				<span class="notes-description">A link-layer device that has an active role where it stores and forwards Ethernet frames, and examines incoming frames' MAC addresses, selectively forwards the frames to one or more outgoing links (when a frame is to be forwarded on segment).</span>
+				<span class="notes-description">Transparent (hosts are unaware of the presence of switches).</span>
+				<span class="notes-description">Plug-and-play (switches don't need to be configured).</span>
+				<span class="notes-description">Multiple simultaneous transmissions: Hosts have dedicated and direct connections with the switch. Switches buffer packets. The ethernet protocol is used on each incoming link, but there are no collisions (full duplex, where each link is its own collision domain).</span>
+				<span class="notes-description">Every switch has a switch table it can use to determine whether a host is reachable via a given interface. The table contains the MAC address of the host, the interface through which the host can be reached, and a timestamp. It looks like a routing table.</span>
+				<span class="notes-description">Switches are self-learning, in that they learn which hosts can be reached through which interface. When a frame is received, the switch learns the location of the sender and saves the sender and location pair in its switch table.</span>
+				<span class="notes-description">Both switches and routers are "store-and-forward" (routers are network-layer devices whereas switches are link-layer devices). They both have forwarding tables (routers compute tables using routing algorithms and IP addresses, whereas switches learn and fill out a forwarding table using flooding, learning, and MAC addresses).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">An example of a full journey through the protocol stack</span>
+				<span class="notes-description">Scenario: A student connects a laptop to the campus network with an ethernet cable, and visits Google.</span>
+				<span class="notes-description">The laptop gets an IP address through the router's DHCP. The DHCP request is encapsulated in UDP, then in IP, and then in 802.3 ethernet. The ethernet frame is broadcasted on LAN, and received at the router that's running the DHCP server. The frame is then demuxed (demultiplexed) from ethernet to IP, then to UDP, then to DHCP.</span>
+				<span class="notes-description">The DHCP server then formulates a DHCP ACK containing the client's IP address, the IP address of the first-hop router, and the name and IP address of the DNS server. It's then encapsulated at the DHCP server, and the frame is forwarded (using switch learning) through the LAN, and demuxed on the client's device, where the client then receives the DHCP ACK. At this point, the client has an IP address, knows the name and IP address of the DNS server, and the IP address of its first-hop router.</span>
+				<span class="notes-description">The student then visists Google. Before sending the HTTP request, a DNS query is created, encapsulated in UDP, then IP, then ethernet, and sent to the router, but first, the client needs the MAC address of the router interface, so an ARP query is broadcasted, received by the router, and the client now knows the MAC address of the first-hop router, which they use to send the frame containing the DNS query. The IP datagram containing the DNS query is forwarded via the LAN switch from the client to the first-hop router, where the datagram is then forwarded from the campus network to the ISP, and then routed to the DNS server, where it is demuxed. The DNS server then replies to the client with the IP address of Google.</span>
+				<span class="notes-description">The client then opens a TCP socket to the web server, and a TCP SYN segment (first step in a 3-way handshake) is routed to the web server. The server respons with a TCP SYN ACK, and a connection is established. The HTTP request is then sent into the TCP socket, and the IP datagram containing the HTTP request is routed to Google, where the web server responds with the HTTP reply which contains the webpage. The IP datagram containing this reply is then routed back to the client, and the webpage is displayed.</span>
+			</div>
 		</div>
 	</body>
 </html>
