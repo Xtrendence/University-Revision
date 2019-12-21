@@ -84,8 +84,11 @@ a {
 	font-weight:bold;
 	line-height:70px;
 	padding:0;
-	width:calc(100% - 40px - 20px - 70px);
+	width:calc(100% - 40px);
 	box-shadow:var(--shadow-dark);
+}
+.card-divider.one-icon {
+	width:calc(100% - 40px - 20px - 70px);
 }
 .card-title {
 	font-size:18px;
