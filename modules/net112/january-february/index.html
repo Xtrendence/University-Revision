@@ -15,15 +15,201 @@
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="theme-color" content="#141414">
 		<script src="../../../assets/js/main.js" class="js-file"></script>
-		<title>SEC104 - November &amp; December - Revision Notes</title>
+		<title>NET112 - January &amp; February - Revision Notes</title>
 	</head>
 	<body>
 		<div class="notes-wrapper">
 			<a href="../index.html">
 				<svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"/></svg>
 			</a>
-			<span class="notes-heading two-icons">Social Engineering &amp; Phishing</span>
+			<span class="notes-heading two-icons">Computer Systems &amp; Networks</span>
 			<svg class="edit-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"/></svg>
+			<div class="notes-container">
+				<img src="../../../assets/img/gidt.png">
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">What material is used to make computer chips?</span>
+				<span class="notes-description">Chemical methods are used on sand to convert it to pure silicon, which shines like a metal, but is breakable. Silicon being a semiconductor, it can be used to conduct electricity. This means that we can switch an electrical current in silicon on or off rapidly and at will. Using silicon, we can make fast switches, which put together, make a chip, which is put inside a plastic cover.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">How do silicon switches allow a chip to function?</span>
+				<span class="notes-description">It's called switch logic, or Boolean logic. A switch is either on or off (1 or 0), and a digital signal only has two possible voltage values, usually known as logic 0 and logic 1. For CMOS logic gates, logic 1 is any voltage that is greater than 70% of the supply voltage, and logic 0 anything less than 30%. Any values in between are not acceptable. Swithces can also be referred to as transistors.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Logic gates</span>
+				<span class="notes-description"><b>NOT</b> - Output value is the opposite of the input.</span>
+				<span class="notes-description"><b>AND</b> - If both inputs are 1, then the output will be 1, otherwise the output will be 0.</span>
+				<span class="notes-description"><b>OR</b> - If any of the values at the input are 1, then the output will also be 1.</span>
+				<span class="notes-description"><b>XOR</b> - If the two inputs are different, then the output would be 1.</span>
+				<span class="notes-description"><b>NAND</b> - If both inputs are 1, then the output would be 0, and AB would be 1, otherwise, the output would be 1, and AB would be 0.</span>
+				<span class="notes-description"><b>NOR</b> - If both inputs are 0, then A+B would be 0, and the output would be 1, otherwise, A+B would be 1 and the output would be 0.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Boolean axioms and theorems</span>
+				<span class="notes-description"><b>Identity Property:</b></span>
+				<span class="notes-description">x + 0 = x</span>
+				<span class="notes-description">x . 1 = x</span>
+				<span class="notes-description">x + 1 = 1</span>
+				<span class="notes-description">x . 0 = 0</span>
+				<span class="notes-description"><b>Idempotent Property:</b></span>
+				<span class="notes-description">x + x = x/span>
+				<span class="notes-description">x . x = x</span>
+				<span class="notes-description"><b>Complement Property:</b></span>
+				<span class="notes-description">x + x' = 1</span>
+				<span class="notes-description">x . x' = 0</span>
+				<span class="notes-description"><b>Involution Property:</b></span>
+				<span class="notes-description">(x')' = x</span>
+				<span class="notes-description"><b>Commutative Property:</b></span>
+				<span class="notes-description">x + y = y + x</span>
+				<span class="notes-description">x . y = y . x</span>
+				<span class="notes-description"><b>Associative Property:</b></span>
+				<span class="notes-description">x + (y + z) = (x + y) + z</span>
+				<span class="notes-description">x . (y . z) = (x . y) . z</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title"><a href="https://www.electronics-tutorials.ws/boolean/bool_6.html" target="_blank">Boolean expression simplification</a></span>
+				<span class="notes-description"><b>Annulment Law</b> – A term AND´ed with a “0” equals 0 or OR´ed with a “1” will equal 1</span>
+				<span class="notes-description">A . 0 = 0 A variable AND’ed with 0 is always equal to 0</span>
+				<span class="notes-description">A + 1 = 1 A variable OR’ed with 1 is always equal to 1</span>
+				<span class="notes-description"><b>Identity Law</b> – A term OR´ed with a “0” or AND´ed with a “1” will always equal that term</span>
+				<span class="notes-description">A + 0 = A   A variable OR’ed with 0 is always equal to the variable</span>
+				<span class="notes-description">A . 1 = A    A variable AND’ed with 1 is always equal to the variable</span>
+				<span class="notes-description"><b>Idempotent Law</b> – An input that is AND´ed or OR´ed with itself is equal to that input</span>
+				<span class="notes-description">A + A = A A variable OR’ed with itself is always equal to the variable</span>
+				<span class="notes-description">A . A = A A variable AND’ed with itself is always equal to the variable</span>
+				<span class="notes-description"><b>Complement Law</b> – A term AND´ed with its complement equals “0” and a term OR´ed with its complement equals “1”</span>
+				<span class="notes-description">A . A = 0 A variable AND’ed with its complement is always equal to 0</span>
+				<span class="notes-description">A + A = 1 A variable OR’ed with its complement is always equal to 1</span>
+				<span class="notes-description"><b>Commutative Law</b> – The order of application of two separate terms is not important</span>
+				<span class="notes-description">A . B = B . A The order in which two variables are AND’ed makes no difference</span>
+				<span class="notes-description">A + B = B + A The order in which two variables are OR’ed makes no difference</span>
+				<span class="notes-description"><b>Double Negation Law</b> – A term that is inverted twice is equal to the original term</span>
+				<span class="notes-description">A = A A double complement of a variable is always equal to the variable</span>
+				<span class="notes-description"><b>De Morgan´s Theorem</b> – There are two “de Morgan´s” rules or theorems,</span>
+				<span class="notes-description">(1) Two separate terms NOR´ed together is the same as the two terms inverted (Complement) and AND´ed for example:  A+B = A . B</span>
+				<span class="notes-description">(2) Two separate terms NAND´ed together is the same as the two terms inverted (Complement) and OR´ed for example:  A.B = A + B</span>
+				<span class="notes-description"><b>Other algebraic Laws of Boolean not detailed above include:</b></span>
+				<span class="notes-description"><b>Distributive Law</b> – This law permits the multiplying or factoring out of an expression.</span>
+				<span class="notes-description">A(B + C) = A.B + A.C (OR Distributive Law)
+				A + (B.C) = (A + B).(A + C) (AND Distributive Law)</span>
+				<span class="notes-description"><b>Absorptive Law</b> – This law enables a reduction in a complicated expression to a simpler one by absorbing like terms.</span>
+				<span class="notes-description">A + (A.B) = A (OR Absorption Law)</span>
+				<span class="notes-description">A(A + B) = A (AND Absorption Law)</span>
+				<span class="notes-description"><b>Associative Law</b> – This law allows the removal of brackets from an expression and regrouping of the variables.</span>
+				<span class="notes-description">A + (B + C) = (A + B) + C = A + B + C (OR Associate Law)</span>
+				<span class="notes-description">A(B.C) = (A.B)C = A . B . C (AND Associate Law)</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Von Neumann Architecture</span>
+				<span class="notes-description"><b>Memory: </b>Loads and stores data and program.</span>
+				<span class="notes-description"><b>Control Unit: </b>Executes program via the fetch, decode, execute cycle.</span>
+				<span class="notes-description"><b>Registers: </b>Small memory with a specific purpose</span>
+				<span class="notes-description"><b>I/O </b>Handles communication with the "outside world" (such as the screen, keyboard, storage devices etc.)</span>
+				<span class="notes-description"><b>ALU: </b>Performs arithmetic/logic operations requested by program.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">CPU</span>
+				<span class="notes-description">The CPU carries out the program's instructions. It operates on data it finds in the computer's memory, and includes all binary circuits that carry out arithmetic and logic operations, reduced to a single Integrated Circuit.</span>
+				<span class="notes-description">CPUs support a set of very simple instructions that typically fall into three categories: Data movement (load, store, copy), arithmetic/logical (add, subtract, compare), program control (branch, jump). The commands are implemented as electronic binary circuits which can transform the 0s and 1s.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">CPU Clock</span>
+				<span class="notes-description">Every computer contains an internal clock that regulates the rate at which instructions are executed and synchronizes all the various computer components.</span>
+				<span class="notes-description">All CPU and bus operations are synchronized to the clock.</span>
+				<span class="notes-description">Clock speeds are expressed in MHz or GHz. At the beginning of each cycle is when the clock signal goes from 0 to 1. CPU frequency of 2 GHz would have a clock cycle of 0.5ns. In the computer, all timings are measured in terms of clock cycles (e.g. an addition needs 2 cycles).</span>
+				<span class="notes-description">The faster the clock, the more instructions the CPU can execute per second, but the clock isn't the same as performance. CPU frequency is not necessarily indicative of the execution speed (complex operations, cache misses etc.) The entire system is tied to the speed of the system clock, this is why increasing the system clock speed is usually more important than increasing the CPU clock, but the CPU is usually bottlenecked by slower devices such as memory.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Registers</span>
+				<span class="notes-description">In a computer a register is the fastest memory. Registers are fast standalone storage locations that hold data temporarily.</span>
+				<span class="notes-description">Multiple registers are needed to facilitate the operation for the CPU. The main registers are: Instruction Register (IR), Program Counter (PC)/Instruction Pointer (IP), and data registers.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">ALU (Arithmetic Logic Unit)</span>
+				<span class="notes-description">The ALU carries out the logic operations (such as comparisons) and arithmetic operations (add, shift, multiply) required during the program execution.</span>
+				<span class="notes-description">The ALU knows which operation to perform, where the input data is, where to store the output data (all of these are provided by the Control Unit).</span>
+				<span class="notes-description">The ALU performs: Integer arithmetic operations (add, subtract, increment, decrement), and bitwise logical operations (AND, OR, XOR, NOT, arithmetic shift, logical shift, rotate).</span>
+				<span class="notes-description">ALUs usually do not perform division operations, because the result may be a fraction or floating point number. Instead, the FPU (floating-point unit) performs operations on floating point numbers.</span>
+				<span class="notes-description">The multiply-accumulate operation is a common step that computes the product of two numbers and adds that product to an accumulator. It speeds up many computations that involve the accumulation of products (e.g. Matrix by matrix multiplication). The hardware unit that performs the operation is known as a Multiplier Accumulator unit (MAC).</span>
+				<span class="notes-description"><b>Arithmetic Shift: </b>When shifting to the right, the leftmost bit (the vacant MSB) is filled with the value of the previous MSB (sign). Ideal for signed two's complement binary numbers.</span>
+				<span class="notes-description"><b>Logical Shift: </b>The vacant bits are filled with zero. The logical and arithmetic left-shifts are exactly the same. Ideal for unsigned binary numbers.</span>
+				<span class="notes-description"><b>Circular Shift (or Bit Rotation): </b>In this operation, the bits are "rotated" as if the left and right ends of the register were joined. The value that is shifted in on the right during a left-shift is whatever value was shifted out on the left, and vice versa.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">CU (Control Unit)</span>
+				<span class="notes-description">A Control Unit is the unit that handles the central work of the computer. It is responsible for executing the right instruction and organizes the other function units appropriately.</span>
+				<span class="notes-description">There are two registers in the CU: Instruction Register (IR, contains the instruction that is being executed) and Program Counter (PC, contains the address of the next instruction to be executed).</span>
+				<span class="notes-description">In every clock cycle, the CU would: Load the next instruction to be executed from the memory (PC register contains the address), the instruction is stored into the IR and is decoded, the CU then sends a signal to the ALU, memory, I/O devices in order to execute the instruction. The CU then increments the Program Counter to show the next instruction.</span>
+				<span class="notes-description">The program is stored in the memory (machine language instructions are in binary format).</span>
+				<span class="notes-description"><b>CU Tasks: </b>Fetch from the memory the next instruction to be executed, decode it, determine what has to be done, execute it by issuing the appropriate signals to the ALU, memory, and I/O subsystems, and continues until the program terminates (HALT instruction).</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Main Memory</span>
+				<span class="notes-description">Computer memory consists of a linear array of addressable storage cells that are similar to registers. Both program and data are stored in the memory. Load/Store operations are performed on both instructions and data.</span>
+				<span class="notes-description">The main memory consists of many memory cells (storage units) of a fixed size. Each cell has an address associated with it. All accesses to memory are to a specific address. The time it takes to fetch/store a word is the same for all words.</span>
+				<span class="notes-description"><b>Address Space: </b>To access a word in memory, an identifier is required. Although programmers use a name to identify a word (a variable), at the hardware level, each word is identified by an address. The total number of uniquely identifiable locations in memory is called the address space. For example a memory with 64KB and a word size of 1 byte has an address space that ranges from 0 to 65,535. If the memory contains N words, then log2N bits are needed to address all words in memory. If the memory address space needs N bits, then there are 2^N words in memory.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Buses</span>
+				<span class="notes-description">3 Buses: Control Bus (sends appropriate signal whether store or load), Address Bus (sends the memory address), Data Bus (sends the data).</span>
+				<span class="notes-description">A bus is a group of wires that transfer data from one part to another.</span>
+				<span class="notes-description"><b>Data Bus: </b>Bi-directional (read/write). 8/16/32/64-bit wide (same as word size).</span>
+				<span class="notes-description"><b>Address Bus: </b>Specifies memory location in RAM/ROM/interface device to be accessed; monodirectional. Address space (16-bit wide, 2^16 words, 64x2^10, 64KB). 32-bit wide (2^32, 4GB, this is why in 32-bit PCs, only 4GB of RAM can be used).</span>
+				<span class="notes-description"><b>Control Bus: </b>Carries commands from the CPU and returns status signals from the devices.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Machine Language or Machine Code</span>
+				<span class="notes-description">A program consists of a sequence of instructions. Each instruction specifies both the operation to perform, and the address of the data. Instructions are stored and processed in machine language, also called microcode. Like everything else, machine language consists solely of bit patterns.</span>
+				<span class="notes-description">Machine languages consist entirely of binary numbers and are almost impossible for humans to read and write. Assembly languages have the same structure and set of commands as machine languages, but they enable the programmer to use names instead of numbers. Each type of CPU has its own machine language and assembly language. Assembly language is used when speed is essential.</span>
+				<span class="notes-description">A machine language instruction consists of: Operation Code (specifying which operation to perform), Address Fields (specifying the memory addresses of the values on which he operation works). Instructions are given to the processor in the form of a program, so it knows what circuits to use, in what order, and from where the data should be read or where it should be stored.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Basic Assembly Instructions</span>
+				<span class="notes-description"><b>Store 0xA2B, R1: </b>Store R1 in A2B16 memory location.</span>
+				<span class="notes-description"><b>ADD R1, R2: </b>Add R1 and R2 and store the result in R1.</span>
+				<span class="notes-description"><b>SUB R1, R2, R3: </b>R1 = R2 - R3</span>
+				<span class="notes-description"><b>MUL R1, R2: </b>R1 = R1 * R2</span>
+				<span class="notes-description"><b>DIV R1, R2: </b>R1 = R1 / R2</span>
+				<span class="notes-description"><b>INC R4: </b>R4 = R4 + 1</span>
+				<span class="notes-description"><b>HALT: </b>Stops program execution.</span>
+				<span class="notes-description"><b>CMP R1, 10: </b>If R1 == 10, then set the register EQ=1, else EQ=0.</span>
+				<span class="notes-description"><b>JMP EQ S1: </b>Load next instruction from memory location S1, if EQ == 1.</span>
+				<span class="notes-description">Assemblers translate instructions that are comprehensible to humans into the machine language that is comprehensible to computers.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">High Level Language VS Assembly Language</span>
+				<span class="notes-description"><b>High Level: </b>Easily understandable, portable, debugging of the code is easy, converted into assembly by the compiler.</span>
+				<span class="notes-description"><b>Assembly: </b>Hard to understand, runs only on the targeted CPU, debugging is very hard, one to one or one to few relationship, the assembly language programmer must know about the hardware such as registers. Assembly language can control the machine code better, and assembly is much faster.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Program Execution</span>
+				<span class="notes-description">PC is set ot the address where the first program instruction is stored in memory. Repeat until HALT instruction or fatal error. Fetch instruction from memory at address given by the PC, copy it to the storage register. Decode the instruction and copy the operation code into the IR and operands into address registers. Interprets the instruction, the ALU is then invoked and the instruction is executed. The execution cycles vary, depending on the operation code (instruction), for example LOAD copies data from memory to the ALU register, ADD adds values inside the ALU. The PC is then incremented by one and now contains the memory address of the next instruction that will be fetched.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Memory Types</span>
+				<span class="notes-description">RAM (Random Access Memory), also referred to as main memory. Static/Dynamic RAM (SRAM, DRAM).</span>
+				<span class="notes-description">ROM (Read Only Memory). Programmable read-only memory (PROM), Erasable programmable read-only memory (EPROM), Electrically erasable programmable read-only memory (EEPROM). RAM loses any information it is holding when the power is turned off, making is volatile. ROM is meant for permanent storage, whereas RAM is for temporary storage. ROM is used primarily int he start up process of a computer, whereas a RAM chip is used in the normal operations of a computer on the operating system has been loaded. A good example of ROM is the computer BIOS, a PROM chip that stores the programming needed to begin the initial computer start up process. Writing data to the ROM chip is a much slower process than writing it to a RAM chip. A RAM chip can store multiple GBs of data, ranging from 1GB to 256GB per chip, whereas a ROM chip stores several MBs of data, typically 4MB or 8MB per chip.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Cache Memory</span>
+				<span class="notes-description">Cache is a high speed static random access memory (SRAM) that a CPU can access more quickly than it can access regular RAM. It is typically integrated indirectly into the CPU chip. Cache memory is faster than main memory, but slower than the CPU and its registers. Cache memory is normally small in size, and is placed between the CPU and the main memory. Cache is used to store program instructions and data that's used repeatedly. The processor can access this information quickly from the cache rather than having to get it from the computer's main memory. Fast access to these instructions increases the overall speed of the program.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title">Secondary Memory</span>
+				<span class="notes-description">Secondary memory is used to store data and programs on a long-term basis. Common secondary storage devices include hard drives, solid state drives, optical disks etc., and they have enormous storage capacity compared to main memory. Data and programs on the hard disk are organized into files (a file is a collection of data on the disk that has a name). Running programs are always located in main memory.</span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title"></span>
+				<span class="notes-description"></span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title"></span>
+				<span class="notes-description"></span>
+			</div>
+			<div class="notes-container">
+				<span class="notes-title"></span>
+				<span class="notes-description"></span>
+			</div>
 			<div class="notes-container">
 				<span class="notes-title"></span>
 				<span class="notes-description"></span>
