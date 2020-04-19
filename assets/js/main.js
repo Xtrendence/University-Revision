@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 		var link_elements = document.getElementsByTagName("link");
 		for(i = 0; i < link_elements.length; i++) {
 			if(link_elements[i].getAttribute("rel") == "stylesheet") {
-				link_elements[i].href = link_elements[i].href + "?15";
+				link_elements[i].href = link_elements[i].href + "?16";
 			}
 		}
 		document.getElementsByClassName("js-file")[0].src = document.getElementsByClassName("js-file")[0].src + "?" + epoch();
