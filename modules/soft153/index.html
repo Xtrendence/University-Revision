@@ -91,20 +91,45 @@ IDENT ::= “a” | “b” | “c”  ;</pre>
 			</div>
 			<span class="notes-heading">Diagrams</span>
 			<div class="notes-container">
-				<span class="notes-title"></span>
-				<span class="notes-description"></span>
+				<span class="notes-title">Main idea</span>
+				<span class="notes-description">Graphical tools can help with visualizing the structure of code. Flow diagrams and structograms visualize control flow.</span>
+				<span class="notes-description">Well designed code is easier to maintain and communicate, either between members of a team or to customers. Good planning reduces trial and error coding in favor of a more systematic approach. Visualization helps beginners understand code better.</span>
 			</div>
 			<div class="notes-container">
-				<span class="notes-title"></span>
-				<span class="notes-description"></span>
+				<span class="notes-title">Control flow</span>
+				<span class="notes-description">CPUs are sequential machines, and perform one operation at a time. Statements organize the flow of control (which operations are performed in what order).</span>
+				<span class="notes-description">Major control elements: statements and sequences, conditional branching (if-then, if-else, switch), repetition (for-loop, while-loop, repeat-until), and jumps (goto, break, continue).</span>
 			</div>
 			<div class="notes-container">
-				<span class="notes-title"></span>
-				<span class="notes-description"></span>
+				<span class="notes-title">Flow diagrams</span>
+				<span class="notes-description">Flow diagrams were an early tool to visualize the flow of control of a program. They are still used to teach beginners, but they aren't used in software development anymore. They are only usable for small size programs, do not support for-loops and while-loops very well, and lead to an uncontrolled use of "goto".</span>
+				<img src="./1.png">
+				<img src="./2.png">
+				<img src="./3.png">
+				<img src="./4.png">
+				<img src="./5.png">
 			</div>
 			<div class="notes-container">
-				<span class="notes-title"></span>
-				<span class="notes-description"></span>
+				<span class="notes-title">Structograms (Nassi-Shneiderman Diagrams)</span>
+				<span class="notes-description">Break problems into pieces according to the problem structure, break pieces into smaller pieces, don't refer to specific language elements early, pieces interact via "interfaces" but are otherwise independent. Project -> Modules -> Functions -> Fragments.</span>
+				<span class="notes-description">Process: Can contain a single statement or a bigger functional block depending on the resolution. Flow enters on top and exits on bottom of the element.</span>
+				<img src="./6.png">
+				<span class="notes-description">Decision: If condition B is true, do the THEN-clause, otherwise do the ELSE-clause. The clauses are process blocks.</span>
+				<img src="./7.png">
+				<span class="notes-description">For-Loop &amp; While-loop: A process block within a loop, where the loop's exit condition is evaluated at the beginning.</span>
+				<img src="./8.png">
+				<span class="notes-description">Do-While-Loop: A loop where the exit condition is checked at the end.</span>
+				<img src="./9.png">
+				<span class="notes-description">Break / Continue: Similar to for-loops and while-loops.</span>
+				<img src="./10.png">
+				<span class="notes-description">Example:</span>
+				<img src="./11.png">
+				<span class="notes-description">Nested Loops:</span>
+				<img src="./12.png">
+				<span class="notes-description">Example Sum:</span>
+				<img src="./13.png">
+				<span class="notes-description">Example Checking for Prime Number:</span>
+				<img src="./14.png">
 			</div>
 			<div class="notes-container">
 				<span class="notes-title"></span>
