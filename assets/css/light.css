@@ -190,7 +190,7 @@ a {
 }
 .notes-wrapper iframe {
 	width:calc(100% - 40px - 4px);
-	height:785px;
+	height:900px;
 	outline:none;
 	border-style:solid;
 	border-color:rgb(75,75,75);
